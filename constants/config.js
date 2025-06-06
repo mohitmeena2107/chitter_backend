@@ -1,13 +1,5 @@
 const corsOptions = {
-  origin: [
-    "http://localhost:5173",
-    "http://localhost:4173",
-    process.env.CLIENT_URL,
-  ],
+  origin: true, // or '*' if you're not using credentials
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
+  credentials: true, // only include this if you are using cookies or Authorization headers
 };
-
-const CHITTER_TOKEN = "561651";
-
-export { corsOptions, CHITTER_TOKEN };
